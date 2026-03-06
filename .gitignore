@@ -229,3 +229,16 @@ videos/
 
 # VSCode
 .vscode/
+
+# Project runtime data
+data/*
+!data/uploads/
+!data/uploads/.gitkeep
+!data/outputs/
+!data/outputs/.gitkeep
+!data/zips/
+!data/zips/.gitkeep
+!data/logs/
+!data/logs/.gitkeep
+!data/db/
+!data/db/.gitkeep

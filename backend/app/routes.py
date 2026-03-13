@@ -24,7 +24,7 @@ def create_task(payload: CreateTaskRequest):
     with Session(engine) as session:
         task = Task(
             type=payload.type,
-            provider=payload.provider,
+            provider=payload.provider or "mock",
             params_json=json.dumps(payload.params, ensure_ascii=False),
             request_text=payload.request_text,
             n_outputs=payload.n_outputs,

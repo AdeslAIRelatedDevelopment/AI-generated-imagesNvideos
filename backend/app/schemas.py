@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 
 class CreateTaskRequest(BaseModel):
     type: str = Field(default="image")
-    provider: Optional[str] = None
+    provider: Optional[str] = Field(default="mock")
     params: dict[str, Any] = Field(default_factory=dict)
     request_text: str
     n_outputs: int = Field(default=1, ge=1, le=12)
